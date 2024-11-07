@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace Comerciolib
 {
-    internal class Ticket
+    public abstract class Ticket
     {
+        protected int nroOrden;
+        DateTime fechaHora;
+
+        public int VerNumero()
+        {
+            return nroOrden;
+        }
+
+        public DateTime VerFecha()
+        {
+            return fechaHora;
+        }
     }
 }
