@@ -11,11 +11,23 @@ namespace Comerciolib
         static int nroinicio;
         int dni;
 
-        public Cliente (string Dni)
+        public Cliente(string DNI)
         {
-            
-            int dni = convertToInt32(tbDni.text);
-                if (dni<300000000) { }
+
+            int Dni = Convert.ToInt32(DNI);
+            if (dni < 300000000 && dni > 45000000)
+            {
+                throw new DniNoValidoExceptioon("Ingrese un dni valido");
+
+
+            }
+            this.dni = Dni;
+            nroOrden = nroinicio++;
         }
+        public override string ToString()
+        {  
+            return $"{nroinicio};{dni}"; 
+        }
+        
     }
 }

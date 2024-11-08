@@ -6,14 +6,25 @@ using System.Threading.Tasks;
 
 namespace Comerciolib
 {
-    internal class CuentaCorriente: IComparable<CuentaCorriente>
+    public class CuentaCorriente: IComparable<CuentaCorriente>
 
     {
         private int nrocuenta;
         Cliente titular;
         private double saldo;
 
-            public int VerNumero()
+
+        public CuentaCorriente(int n, Cliente titular)
+        {
+            nrocuenta = n;
+            this.titular = titular;
+        }
+
+        public void RegistrarPago(double m)
+        { this.saldo -= m; }
+        public void RegistrarCompra(double m)
+        { this.saldo += m; }
+        public int VerNumero()
         {
             return nrocuenta;
         }
@@ -24,7 +35,10 @@ namespace Comerciolib
             return 1;
 
         }
-
+        public override string ToString()
+        {
+            return $"{nrocuenta};{saldo}";
+        }
 
     }
 }

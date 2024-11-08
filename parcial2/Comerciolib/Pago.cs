@@ -6,7 +6,26 @@ using System.Threading.Tasks;
 
 namespace Comerciolib
 {
-    internal class Pago
+    internal class Pago : Ticket
+
     {
+
+        static int nroInicio;
+        private CuentaCorriente cuentac;
+        public Pago(CuentaCorriente cuentac)
+        {
+            this.cuentac = cuentac;
+            nroOrden = nroInicio++;
+        }
+
+        public void MontoPago(double valor)
+        {
+            cuentac.RegistrarPago(valor);
+        }
+
+        public override string ToString()
+        {
+            return $"{nroInicio}; {cuentac.ToString()}";
+        }
     }
 }
