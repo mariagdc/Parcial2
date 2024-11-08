@@ -42,6 +42,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.controlOpenF = new System.Windows.Forms.OpenFileDialog();
+            this.ControlguardarDOC = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +63,7 @@
             this.btnTicket.TabIndex = 1;
             this.btnTicket.Text = "TICKET";
             this.btnTicket.UseVisualStyleBackColor = true;
+            this.btnTicket.Click += new System.EventHandler(this.btnTicket_Click);
             // 
             // btnExpo
             // 
@@ -70,6 +73,7 @@
             this.btnExpo.TabIndex = 2;
             this.btnExpo.Text = "Exportar tickets";
             this.btnExpo.UseVisualStyleBackColor = true;
+            this.btnExpo.Click += new System.EventHandler(this.btnExpo_Click);
             // 
             // btnAtender
             // 
@@ -81,6 +85,7 @@
             this.btnAtender.TabIndex = 3;
             this.btnAtender.Text = "Atender Cliente";
             this.btnAtender.UseVisualStyleBackColor = false;
+            this.btnAtender.Click += new System.EventHandler(this.btnAtender_Click);
             // 
             // btnImpo
             // 
@@ -90,6 +95,7 @@
             this.btnImpo.TabIndex = 4;
             this.btnImpo.Text = "Importar Cuentas Corrientes";
             this.btnImpo.UseVisualStyleBackColor = true;
+            this.btnImpo.Click += new System.EventHandler(this.btnImpo_Click);
             // 
             // checkBox1
             // 
@@ -173,6 +179,10 @@
             this.listBox1.Size = new System.Drawing.Size(351, 95);
             this.listBox1.TabIndex = 12;
             // 
+            // controlOpenF
+            // 
+            this.controlOpenF.FileName = "controlOpenF";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +225,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.OpenFileDialog controlOpenF;
+        private System.Windows.Forms.SaveFileDialog ControlguardarDOC;
     }
 }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Comerciolib
 {
-    internal class Pago : Ticket
+    public class Pago : Ticket
 
     {
 

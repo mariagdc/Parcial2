@@ -14,7 +14,7 @@ namespace Comerciolib
         List <CuentaCorriente> cuentasCorrientes = new List<CuentaCorriente> ();
         Queue<Pago> pagos = new Queue<Pago> ();
         Queue<Cliente> clientes = new Queue<Cliente> ();    
-        List <Ticket> ticketes = new List<Ticket> ();
+       public List <Ticket> ticketes = new List<Ticket> ();
 
 
         public void AgregarTicket(Ticket turno)
@@ -68,7 +68,10 @@ namespace Comerciolib
 
 
         }
-
+        public List<Ticket> VerTickets()
+        {
+            return ticketes;
+        }
         public void CrearCuentaC(int c, Cliente nc)
         {
             cuentasCorrientes.Add(new CuentaCorriente(c,nc));
