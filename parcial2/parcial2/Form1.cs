@@ -87,7 +87,7 @@ namespace parcial2
                 {
                     string path = controlOpenF.FileName;
 
-                    fs = new FileStream("CuentasCorrientes.csv", FileMode.Open, FileAccess.Read);
+                    fs = new FileStream(path, FileMode.Open, FileAccess.Read);
 
                     sr = new StreamReader(fs);
 
@@ -105,7 +105,7 @@ namespace parcial2
                         cuentaC = c.pedirCuenta(NroCuenta);
                         if (cuentaC == null)
                         {
-                            //Acá agregué un método que cree CuentasCorrientes
+                            //Acá agregué un método que cree CuentasCorrientes --Vir
                             Cliente nuevo = new Cliente(dni);
                             c.CrearCuentaC(NroCuenta, nuevo);
                         }
